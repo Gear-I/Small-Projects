@@ -6,7 +6,7 @@ import PyPDF2
 window = Tk()
 window.title('PDF To Audio Converter Version 1.0')
 window.geometry('500x350')
-window.iconbitmap(https://github.com/Gear-I/Small-Projects/blob/main/PDF%20To%20Audio/icons8-audiobook-64.ico)
+window.iconbitmap('https://github.com/Gear-I/Small-Projects/blob/main/PDF%20To%20Audio/icons8-audiobook-64.ico')
 window.config(bg="orange")
 
 startingpagenumber = Entry(Window)
