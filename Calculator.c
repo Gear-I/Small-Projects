@@ -1,7 +1,7 @@
 // Welcome to a simple calculator
 #include <stdio.h>
 #include <stdlib.h>
-printf("Welcome to a simple calculator")
+printf("Welcome to a simple calculator");
 
 int main()
 
