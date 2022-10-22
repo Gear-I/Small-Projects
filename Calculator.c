@@ -6,10 +6,10 @@
 
 int main()
 {
+    printf("Welcome to Calculator");
     char ch;
     double a, b;
     while (1) {
-        printf("Welcome to Calculator");
         printf("Enter an operation of your choice (+, -, *, /), if want to exit press x: ");
         scanf(" %c", &ch);
         // to exit
