@@ -9,7 +9,7 @@
 int main()
 {
     //Text and Background color
-    system("Color D6");
+    system("Color D7");
     char ch;
     double a, b;
     while (1) {
