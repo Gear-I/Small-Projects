@@ -3,9 +3,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
+
 
 int main()
 {
+    //E = Color yellow
+    //2 = Green Background color
+    system("Color 2E");
     char ch;
     double a, b;
     while (1) {
