@@ -41,7 +41,7 @@ int main()
         }
         else {
             // If operation does not match
-            printf("Error! please enter a valid operation\n");
+            printf("Error! please enter a valid input\n");
         }
     }
 }
