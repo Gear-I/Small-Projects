@@ -8,13 +8,13 @@
 
 int main()
 {
-    //E = Color yellow
-    //2 = Green Background color
-    system("Color 2E");
+    //Text and Background color
+    system("Color D6");
     char ch;
     double a, b;
     while (1) {
-        printf(" Welcome to the calculator\nEnter an operation of your choice (+, -, *, /), if want to exit press x: ");
+        printf("Welcome to Calculator\n");
+        printf("Enter an oeration of your choice (+, -, *, /), if want to exit press x: ");
         scanf(" %c", &ch);
         // to exit
         if (ch == 'x')
