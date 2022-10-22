@@ -1,7 +1,6 @@
 // Welcome to a simple calculator
 #include <stdio.h>
 #include <stdlib.h>
-printf("Welcome to a simple calculator");
 
 int main()
 
@@ -9,8 +8,9 @@ int main()
 	char ch;
 	double a, b;
 	while (1) {
+		printf("Welcome to a simple calculator");
 		printf("Enter an opertion either, (+, -, *, /), if want to exit press x: ")
-			scanf("%c", &ch);
+		scanf("%c", &ch);
 		//To Exit
 		if (ch == 'x')
 			exit(0);
