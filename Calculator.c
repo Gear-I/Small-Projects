@@ -14,13 +14,14 @@ int main()
     double a, b;
     while (1) {
         printf("Welcome to Calculator\n");
-        printf("Enter an oeration of your choice (+, -, *, /), if want to exit press x: ");
+        printf("Enter two numbers: , press x to exit: ");
+        scanf("%lf %lf", &a, &b);
+        printf("Enter an oeration of your choice (+, -, *, /) ");
         scanf(" %c", &ch);
         // to exit
         if (ch == 'x')
             exit(0);
-        printf("Enter two numbers: ");
-        scanf("%lf %lf", &a, &b);
+       
         //Different Operations
         if (ch == '+') {
             // For Addition
