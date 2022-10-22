@@ -19,7 +19,7 @@ int main()
 		//Different Operations Options
 		//Addition
 		if (ch == '+') {
-			printf(" % .1lf + % .1lf = % .1lf\n", a, b, a + b); ")
+			printf(" % .1lf + % .1lf = % .1lf\n", a, b, a + b); 
 		}
 		//Subtraction
 		else if (ch == '-') {
