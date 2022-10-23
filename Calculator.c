@@ -25,19 +25,19 @@ int main(int argc, char* argv[]) {
         sscanf(argv[3], "%d", &num2);
         switch (operators) {
         case '+': a = num1 + num2;
-            printf("%d %c %d = %.2f\n", num1, operator, num2, a);
+            printf("%d %c %d = %.2f\n", num1, operator, num2, ans);
             break;
         case '-': a = num1 - num2;
-            printf("%d %c %d = %.2f\n", num1, operator, num2, a);
+            printf("%d %c %d = %.2f\n", num1, operator, num2, ans);
             break;
         case 'x': a = num1 * num2;
-            printf("%d %c %d = %.2f\n", num1, operator, num2, a);
+            printf("%d %c %d = %.2f\n", num1, operator, num2, ans);
             break;
         case '/': a = num1 / num2;
-            printf("%d %c %d = %.2f\n", num1, operator, num2, a);
+            printf("%d %c %d = %.2f\n", num1, operator, num2, ans);
             break;
         case '^': a = num1 ^ num2;
-            printf("%d %c %d = %.2f\n", num1, operator, num2, a);
+            printf("%d %c %d = %.2f\n", num1, operator, num2, ans);
             break;
         case '/': if (num2 == 0) {
             printf("Error! Division by Zero!\n");
