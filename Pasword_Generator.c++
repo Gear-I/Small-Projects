@@ -168,7 +168,8 @@ int main()
 			}
 			break;
 		}
-	} while (opt != 2);
+	} 
+	while (opt != 2);
 
 	return 0;
 }
