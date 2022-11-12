@@ -74,12 +74,33 @@ void generate_pass(int length)
 			count++;
 			break;
 		case = 3:
+			//Include Numbers Characters
 			if ((count_Numbers == 1) && (count_UpperCase == 0 || count_LowerCase == 0 || count_LowerCase == 1 || count_UpperCase == 0 || count_UpperCase == 1 || count_Special_Characters == 0 || count_Symbols == 0 || count_Unicodes == 0))
 				break;
 			key = getkey();
 			key = key % 10;
 			password = password + Numbers[key];
 			count_Numbers++;
+			count++;
+			break;
+		case = 4:
+			//Include Special_Characters
+			if ((count_Special_Characters == 1) && (count_Numbers == 1 || count_Numbers == 0 || count_LowerCase == 1 || count_LowerCase == 0 || count_UpperCase == 1 || count_UpperCase == 0 || count_Symbols == 0 || count_Unicodes == 0))
+				break;
+			key = getkey();
+			key = key % 6;
+			password = password + Special_Characters[key];
+			count_Special_Characters++;
+			count++;
+			break;
+		case = 5:
+			//Include Symbols Characters
+			if ((count_Symbols == 1) && (count_Numbers == 1 || count_Numbers == 0 || count_LowerCase == 1 || count_LowerCase == 0 || count_UpperCase == 1 || count_UpperCase == 0 || count_Special_Characters == 1 || count_Special_Characters == 0 || count_Unicodes == 0))
+				break;
+			key = getkey();
+			key = key % 4;
+			password = password + Special_Characters[key];
+			count_Special_Characters++;
 			count++;
 			break;
 
