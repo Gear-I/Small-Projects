@@ -99,9 +99,78 @@ void generate_pass(int length)
 				break;
 			key = getkey();
 			key = key % 4;
-			password = password + Special_Characters[key];
-			count_Special_Characters++;
+			password = password + Symbols[key];
+			count_Symbols++;
 			count++;
 			break;
+		case = 6:
+			//Include Unicodes Characters
+			if ((count_Unicodes == 1) && (count_Numbers == 1 || count_Numbers == 0 || count_LowerCase == 1 || count_LowerCase == 0 || count_UpperCase == 1 || count_UpperCase == 0 || count_Special_Characters == 1 || count_Special_Characters == 0 || count_Symbols == 1 || count_Symbols == 0))
+				break;
+			key = getkey();
+			key = key % 2;
+			password = password + Unicodes[key];
+			count_Unicodes++;
+			count++;
+			break;
+		}
+
+	}
+	cout << "\n-----------------------------\n";
+	cout << "         Password             \n";
+	cout << "------------------------------\n\n";
+	cout << " " << password;
+	cout << "\n\nPress any key continue \n";
+	getchar();
+}
+int main()
+{
+	int opt, length;
+	//Menu
+	do {
+		cout << "\n-----------------------------\n";
+		cout << "  The Password Generator\n";
+		cout << "------------------------------\n\n";
+		cout << "    1. Generate Password"
+			<< "\n";
+		cout << "    2. Exit"
+			<< "\n\n";
+		cout << "Press key 1 to Generate Password and key 2 to exit  : ";
+		cin >> opt;
+		switch (opt) {
+		case 1:
+			cout << "Enter Length :  ";
+			cin >> length;
+			//if length is less than 7 , program  will show error
+			if (length < 7) {
+				cout << "\nError : Password Length Should be atleast 7\n";
+				cout << "Press any key to try again \n";
+				getchar();
+			}
+			// Length should not exceed 100 , program should show error if it exceeds
+			else if (length > 100) {
+				cout << "\nError : Maximum length of password should be 100\n";
+				cout << "Press any key to try again \n";
+				getchar();
+			}
+			//Otherwise call generate_password() function to generate password
+			else
+				generate_password(length);
+			break;
+
+		default:
+			// If invalid option is chosen by user it will also show error
+			if (opt != 2) {
+				printf("\nInvalid choice\n");
+				printf("Please Press ( 1 ) to generate password and ( 2 ) to exit.\n");
+				cout << "Press any key to try again \n";
+				getchar();
+			}
+			break;
+		}
+	} while (opt != 2);
+
+	return 0;
+}
 
 }
