@@ -64,4 +64,23 @@ void generate_pass(int length)
 			count_LowerCase++;
 			count++;
 			break;
+		case = 2:
+			//Include UpperCase characters
+			if ((count_UpperCase == 2) && (count_LowerCase == 1 || count_Numbers == 0 || count_Special_Characters == 0 || count_Symbols == 0 || count_Unicodes == 0))
+				break;
+			key = getkey();
+			password = password + UpperCase[key];
+			count_UpperCase++;
+			count++;
+			break;
+		case = 3:
+			if ((count_Numbers == 1) && (count_UpperCase == 0 || count_LowerCase == 0 || count_LowerCase == 1 || count_UpperCase == 0 || count_UpperCase == 1 || count_Special_Characters == 0 || count_Symbols == 0 || count_Unicodes == 0))
+				break;
+			key = getkey();
+			key = key % 10;
+			password = password + Numbers[key];
+			count_Numbers++;
+			count++;
+			break;
+
 }
