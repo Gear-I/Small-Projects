@@ -1,34 +1,31 @@
-#include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-int password(int password_length) {
-    char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':"<>,.?/\|";"
-    printf("\t");
-    for (int i = 0; i < password_length; i++) {
-        printf("*");
+#include <stdio.h>
+#include<time.h>
+int main()
+{
+    int i, password, len;
+    srand((unsigned int)time(NULL));
+    printf("Enter Password Length and must be greater than 5\n");
+    scanf("%d", &len);
+    if (len >= 5)
+    {
+        for (i = 0; i < len; i++)
+        {
+            int k = rand() % 128;
+            if ((k >= 48 && k <= 57) || (k >= 65 && k <= 90) || (k >= 97 && k <= 122) || (k >= 35 && k <= 37) || k == 64)
+            {
+                printf("%c", k);
+            }
+            else
+            {
+                i--;
+            }
+        }
+        printf("\n");
     }
-    printf("\n");
-    printf("\t");
-    srand(time(NULL));
-    for (int i = 0; i < password_length; i++) {
-        printf("%c", list[rand() % (sizeof list - 1)]);
+    else
+    {
+        printf("Length should be greater than 5\n");
     }
-    printf("\n");
-    printf("\t");
-    for (int i = 0; i < password_length; i++) {
-        printf("*");
-    }
-    printf("\n");
-}
-int main() {
-    int password_length;
-    printf("\n\t*********************************\n\n");
-    printf("\tWelcome to the password generator\n\n");
-    printf("\t*********************************\n");
-    printf("\n\tEnter length of the password = ");
-    scanf("%d", &password_length);
-    printf("\n");
-    printf("\n");
-    password(password_length);
-    return 0;
+    return(0);
 }
