@@ -1,6 +1,6 @@
 import argparse
 import socket # for connecting
-from colorma import init, Fore
+from colorama import init, Fore
 from threading import Thread, Lock
 from queue import Queue
 
