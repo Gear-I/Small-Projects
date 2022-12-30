@@ -63,7 +63,7 @@ def main(host, ports):
     # wait the threads ( port scanners ) to finish
     q.join()
 
-   if __name__ == "__main__":
+if __name__ == "__main__":
     # parse some parameters passed
     parser = argparse.ArgumentParser(description="Simple port scanner")
     parser.add_argument("host", help="Host to scan.")
