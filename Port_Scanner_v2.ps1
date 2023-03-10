@@ -1,7 +1,7 @@
 function PortScanner {
 param($ip = "localhost")
 $Socket = New-Object System.Net.Socket.TcpClient
-    $Ports = [ordered]@ {
+    $Ports = {
                     FTP=21
                     SSH=22
                     Telnet=23
