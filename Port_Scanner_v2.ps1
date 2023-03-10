@@ -18,6 +18,10 @@ $Socket = New-Object System.Net.Socket.TcpClient
                 Write-Progress -Activity "Searching for ports status" -status "$i% Complete:" -PercentComplete $i
                 Start-sleep -Millliseconds 250
             }
+            Write-Host "$Port Open on $IP" -BackgroundColor Black -ForegroundColor Green
+            Start-Sleep 2
+            }
+        Catch{write-host "Could not connect to port #$port on $IP" -BackgroundColor Black -ForegroundColor Red}
         }
-    }
 }
+PortScanner
