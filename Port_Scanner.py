@@ -1,5 +1,6 @@
 import argparse
 import socket # for connecting
+import subprocess as sp
 from colorama import init, Fore
 from threading import Thread, Lock
 from queue import Queue
