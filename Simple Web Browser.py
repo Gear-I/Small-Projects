@@ -16,4 +16,26 @@ class MainWindow(QMainWindow):
 	def _init_(self, *args, **kwargs):
 		super(MainWindow, self)._init_(*args, **kwargs)
 
+		# Creating a Web Engine View
+		self.broswer = QWebEngineView()
+
+		# Default URL as Google
+		self.browser.seturl(QUrl("https://google.com"))
+
+		# adding action when url gets changed
+		self.browser.urlchange.connect(self.update_urlbar)
+
+		# adding action when loading is completed
+		self.broswer.loadfinish.connect(self.update_title)
+
+		# set broswer as central widget or main window 
+		self.setCentralWidget(self.broswer)
+
+
+
+
+		#loop
+
+		app.exec_()
+
 
