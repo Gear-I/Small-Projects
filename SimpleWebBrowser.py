@@ -1,58 +1,60 @@
-# importing neccessary libraries
-import os
-import sys
+# importing required libraries
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtPrintSupport import *
-
-# Creating Main Window for Browser
-
+import os
+import sys
+ 
+# creating main window class
 class MainWindow(QMainWindow):
-
-	# Constructor
-	def _init_(self, *args, **kwargs):
-		super(MainWindow, self)._init_(*args, **kwargs)
-
-		# Creating a Web Engine View
-		self.broswer = QWebEngineView()
-
-		# Default URL as Google
-		self.browser.seturl(QUrl("https://google.com"))
-
-		# adding action when url gets changed
-		self.browser.urlchange.connect(self.update_urlbar)
-
-		# adding action when loading is completed
-		self.broswer.loadfinish.connect(self.update_title)
-
-		# set broswer as central widget or main window 
-		self.setCentralWidget(self.broswer)
-		#Status Bar
-		self.status = QStatusBar()
-		#Adding Status to Main Window
-		self.setStatusBar(self.status)
-
-		#Toolbar for Navigation
-		navtb = QToolBar("Navigation")
-
-		#ToolBar to Main Window
-		self.addtoolbar(navtb)
-
-		 # adding actions to the tool bar
+ 
+    # constructor
+    def __init__(self, *args, **kwargs):
+        super(MainWindow, self).__init__(*args, **kwargs)
+ 
+ 
+        # creating a QWebEngineView
+        self.browser = QWebEngineView()
+ 
+        # setting default browser url as google
+        self.browser.setUrl(QUrl("http://google.com"))
+ 
+        # adding action when url get changed
+        self.browser.urlChanged.connect(self.update_urlbar)
+ 
+        # adding action when loading is finished
+        self.browser.loadFinished.connect(self.update_title)
+ 
+        # set this browser as central widget or main window
+        self.setCentralWidget(self.browser)
+ 
+        # creating a status bar object
+        self.status = QStatusBar()
+ 
+        # adding status bar to the main window
+        self.setStatusBar(self.status)
+ 
+        # creating QToolBar for navigation
+        navtb = QToolBar("Navigation")
+ 
+        # adding this tool bar tot he main window
+        self.addToolBar(navtb)
+ 
+        # adding actions to the tool bar
         # creating a action for back
-          back_btn = QAction("Back", self)
+        back_btn = QAction("Back", self)
  
         # setting status tip
-          back_btn.setStatusTip("Back to previous page")
+        back_btn.setStatusTip("Back to previous page")
  
         # adding action to the back button
         # making browser go back
-          back_btn.triggered.connect(self.browser.back)
+        back_btn.triggered.connect(self.browser.back)
  
-          # adding this action to tool bar
-          navtb.addAction(back_btn)
+        # adding this action to tool bar
+        navtb.addAction(back_btn)
  
         # similarly for forward action
         next_btn = QAction("Forward", self)
@@ -144,7 +146,7 @@ class MainWindow(QMainWindow):
 app = QApplication(sys.argv)
  
 # setting name to the application
-app.setApplicationName("Geek Browser")
+app.setApplicationName("Web Browser")
  
 # creating a main window object
 window = MainWindow()
