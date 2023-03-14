@@ -42,17 +42,17 @@ class MainWindow(QMainWindow):
 
 		 # adding actions to the tool bar
         # creating a action for back
-        back_btn = QAction("Back", self)
+          back_btn = QAction("Back", self)
  
         # setting status tip
-        back_btn.setStatusTip("Back to previous page")
+          back_btn.setStatusTip("Back to previous page")
  
         # adding action to the back button
         # making browser go back
-        back_btn.triggered.connect(self.browser.back)
+          back_btn.triggered.connect(self.browser.back)
  
-        # adding this action to tool bar
-        navtb.addAction(back_btn)
+          # adding this action to tool bar
+          navtb.addAction(back_btn)
  
         # similarly for forward action
         next_btn = QAction("Forward", self)
