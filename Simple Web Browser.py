@@ -29,7 +29,16 @@ class MainWindow(QMainWindow):
 
 		# set broswer as central widget or main window 
 		self.setCentralWidget(self.broswer)
+		#Status Bar
+		self.status = QStatusBar()
+		#Adding Status to Main Window
+		self.setStatusBar(self.status)
 
+		#Toolbar for Navigation
+		navtb = QToolBar("Navigation")
+
+		#ToolBar to Main Window
+		self.addtoolbar(navtb)
 
 
 
